@@ -1,12 +1,11 @@
 from ea.logger.app_logger import setup_logger
+from ea.snowflake_ingestion.load_customers import load_customers
 
 
 def main():
-    logger = setup_logger()
+    setup_logger()
 
-    logger.debug("Debug message")
-    logger.info("Info message")
-    logger.error("Something went wrong")
+    load_customers("/Users/markbond/Downloads/customers.csv")
     
     
 if __name__ == "__main__":
